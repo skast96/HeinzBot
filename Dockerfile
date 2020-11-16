@@ -25,7 +25,7 @@ RUN FIREFOX_SETUP=firefox-setup.tar.bz2 && \
 WORKDIR /var/www/htdocs
 
 COPY requirements.txt /var/www/htdocs
-RUN pip3 install -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 RUN useradd -ms /bin/bash heinz
 
